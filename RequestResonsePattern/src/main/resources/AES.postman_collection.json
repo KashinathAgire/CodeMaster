@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "86540b26-7efa-41cc-bd39-514283eae074",
+		"name": "AES-ECRYPT-DECRYPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request_Response_Encryption",
+			"item": [
+				{
+					"name": "sendRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Gnc8uTjv4ZcMtb7B2lgAUnhWMFkZJrBuZ1+Om2ME0THy1hz90jh72lltWEqzzBlom6X7Zbg+zqf8o0FVXvx0z/UBZ7LYpK0ACBB6tjOcme3JGMal3y4iK5XQQwH4dKeWNpF/9J3HYkFihBNx3ojVpWTvVlShtV5h+DhbRky5NcEkEoOCJboVp67doPwqpyp4bXoG9nyMD7mla07oq3XtLjql1uIp7sYWpBq/LmU7y+5Jt3OxYtydlcKmbvAfOmT43UwxrbuqM4hh1cLt2o4SlS6oDsp6kPep3UQtjWrkAWb4df8Uz3VWDWnNAy/C2k6YX2ziFtcatMe46zs/7vdeJAhMXDSmCD+NuvBqdf+YHPs=",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8098/sendRequest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8098",
+							"path": [
+								"sendRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getKey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8098/getKey",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8098",
+							"path": [
+								"getKey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "encryption",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"Kashinath \",\r\n    \"firstName\": \"Kashinath\",\r\n    \"midleName\": \"Dagdu\",\r\n    \"lastName\": \"Agire\",\r\n    \"city\": \"Pune\",\r\n    \"state\": \"MH\",\r\n    \"country\": \"India\",\r\n    \"motherName\": \"Kalpana\",\r\n    \"post\": \"peva\",\r\n    \"age\": \"5 Months\",\r\n    \"wait\": \"8kg\",\r\n    \"color\": \"fair\",\r\n    \"relationShip\": \"Self\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8098/encryption/secreteKey?secreteKey=4Pn2TCkhDdA7eXx4kNCk2Q==",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8098",
+							"path": [
+								"encryption",
+								"secreteKey"
+							],
+							"query": [
+								{
+									"key": "secreteKey",
+									"value": "4Pn2TCkhDdA7eXx4kNCk2Q=="
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryption",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "n/EkGB/4toDgcQbuU81op99YEOJ6TM1r20GaDrO7cFe1AdRqH0T+OfXfDFFlDfWeq7z6CaDKXz9OyIRjQ16+tiIZE5RK2LNZYDM3CV4n43vTyY84r7zrXk9D6+1OpO1OSp+Vlc1S65VQAMP0VARhyA==",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8098/decryption/secreteKey?secreteKey=4Pn2TCkhDdA7eXx4kNCk2Q==",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8098",
+							"path": [
+								"decryption",
+								"secreteKey"
+							],
+							"query": [
+								{
+									"key": "secreteKey",
+									"value": "4Pn2TCkhDdA7eXx4kNCk2Q=="
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		
+		
+	]
+}
